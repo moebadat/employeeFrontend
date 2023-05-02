@@ -1,0 +1,30 @@
+.container{
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    width: 957px;
+    height: 300px;
+    padding-top: 20px;
+}
+.block{
+    padding-top: 30px;
+}
+h2{
+    text-align: center;
+    padding-top: 10px;
+    background-color: rgb(166, 208, 248);
+    color: white;
+    margin-left: 15rem;
+    margin-right: 15rem;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+
+}
+label{
+    text-align: left;
+    padding-left: 4px;
+    padding-top: 4px;
+}
+
+
+

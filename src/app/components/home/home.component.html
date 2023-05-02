@@ -1,0 +1,64 @@
+<h1 class="heading">List of Employees</h1>
+<!-- This is a test -->
+
+<div class="container">
+  <div class="row">
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">First name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Department</th>
+      <th scope="col">Contact number</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of items">
+      <th scope="row">{{items.id}}</th>
+      <td>{{item.name}}</td>
+      <td>{{item.surname}}</td>
+      <td>{{item.email}}</td>
+      <td>{{item.department}}</td>
+      <td>{{item.contactNo}}</td>
+      <td class="btn_structucture">
+        <button type="button" class="btn btn-primary" routerLink="/view">View</button>
+        <button type="button" (click) = "delete(items.id)" class="btn btn-success" routerLink="/update">UPDATE</button>
+      <button type="button" class="btn btn-danger" routerLink="/view">DELETE</button>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>{{items.name}}</td>
+      <td>{{items.surname}}</td>
+      <td>{{items.email}}</td>
+      <td>{{items.department}}</td>
+      <td>{{items.contactNo}}</td>
+      <td class="btn_structucture">
+        <button type="button" class="btn btn-primary" routerLink="/view">View</button>
+        <button type="button" class="btn btn-success" routerLink="/update">UPDATE</button>
+      <button type="button" class="btn btn-danger" routerLink="/view">DELETE</button>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Curtis</td>
+      <td>Jones</td>
+      <td>@jones</td>
+      <td>096785</td>
+      <td>12 Max Stree</td>
+      <td class="btn_structucture">
+        <button type="button" class="btn btn-primary" routerLink="/view">View</button>
+        <button type="button" class="btn btn-success" routerLink="/update">UPDATE</button>
+      <button type="button" class="btn btn-danger" routerLink="/view">DELETE</button>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+</div>
+
+

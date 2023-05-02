@@ -1,0 +1,52 @@
+form{
+    text-align: center;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    margin-left: 15rem;
+    margin-right: 15rem;
+    margin-top: none;
+    border-radius: 8px;
+    
+}
+.container{
+    background-color: #f4f4f4;
+    border-radius: 5px;
+}
+h1{
+    text-align: center;
+    padding-top: 2rem;
+    background-color: rgb(166, 208, 248);
+    color: white;
+    margin-left: 15rem;
+    margin-right: 15rem;
+    border-radius: 5px;
+}
+
+input{
+    padding-right: 5rem;
+    border-top:none;
+    border-left:none;
+    border-right: none;
+    border-radius: 5px;
+    padding-top: 20px;
+    width: 25rem;
+    height: 35px;
+}
+
+label{
+    font-size: larger;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-inline-start: 1rem;
+    text-align: center;
+    margin-right: 20px;
+
+}
+
+button{
+    margin-top: 2rem;
+    width: 9rem;
+    height: 3rem;
+    background-color: rgb(166, 208, 248);
+    border-radius: 3rem;
+}
+
