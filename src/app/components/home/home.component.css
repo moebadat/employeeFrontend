@@ -1,24 +1,14 @@
 .heading{
-    color:black;
+    color:rgb(59, 55, 55);
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     margin-top: 30px ;
     text-align: center; 
-    margin-left: 0px;
     margin-bottom: 20px;
+    font-size: 35px;
 }
 .table{
     background-color: #f4f4f4;
  
-}
-.addBtn{
-background-color:rgb(166,208, 248);
-padding-top: 4px;
-padding-bottom: 4px;
-padding-left: 8px;
-padding-right: 8px;
-float: right;
-margin-right: 40px;
-
 }
 .btn{
     margin-left: 10px;
@@ -29,3 +19,8 @@ margin-right: 40px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
 }
+.container{
+
+    margin-top: 50px;
+    background-color: rgb(166, 208, 248);
+  }
