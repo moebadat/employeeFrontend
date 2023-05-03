@@ -1,7 +1,7 @@
 <h1>Add A New Employee</h1>
 
 
-<form [formGroup]="empForm" (ngSubmit)="onFormSubmit()">
+<form [formGroup]="empForm" (ngSubmit)="onFormSubmit()" ngSubmit = false>
     <div>
     <!--<label>Employee's ID: </label>
     <input type="text" placeholder="Enter The Employee's ID." formControlName="EmpId">      
@@ -12,28 +12,32 @@
     <label>First Name: </label>
     <input id= "name"type="text" placeholder="Enter The Employee's Name." formControlName="name">
     <br>
+    <span  *ngIf="name && name.invalid &&name.touched">*The name needs to be included</span>
     </div>
     <div>
     <label>Last Name:</label>
     <input id="surname" type="text" placeholder="Enter The Employee's Surname." formControlName="surname">
     <br>
+    <span *ngIf="surname && surname.invalid &&surname.touched">*The Surname needs to be included</span>
     </div>
     <div>
     <label>Email Address: </label>
     <input type="text" placeholder="Enter The Employee's Email Address." formControlName="email">
     <br>
     </div>
-    
+    <span *ngIf="email && email.invalid &&email.touched">*The email is not valid</span>
     <div>
         <label>Contact Number:</label>
         <input type="text" placeholder="Enter The Employee's Contact Number" formControlName="contactNo">
     <br>
+    <span *ngIf="contactNumber && contactNumber.invalid &&contactNumber.touched">*Enter the correct contact number </span>
     </div>
     <div>
         <label>Department:</label>
         <input type="text" placeholder="Enter The Employee's Department" formControlName="department">
     </div>
-    <button type="submit">Submit</button>
+    <span *ngIf="department && department.invalid &&department.touched">*Please enter a department</span>
+    <button type="submit"  >Submit</button>
 
 
 

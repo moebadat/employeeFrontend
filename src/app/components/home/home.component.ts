@@ -19,9 +19,8 @@ export class HomeComponent {
       });
  }
 
- delete(empId:any){
-  this.service.deleteEmployee(empId).subscribe( data => {
-    console.log(data);
+ delete(Id:number){
+  this.service.deleteEmployee(Id).subscribe( data => {
     this.service.getEmployeeAll();
   })
 }
