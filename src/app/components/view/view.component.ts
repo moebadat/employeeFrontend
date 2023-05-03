@@ -14,15 +14,16 @@ import { Employee } from 'src/app/employee';
 export class ViewComponent implements OnInit {
 
    empId: any;
-   employee!: Employee;
+   employees: Employee[] | undefined;
+   id: number = 1;
    constructor(private route: ActivatedRoute,private employeeService: ServiceService) { }
 
       ngOnInit(): void{
 
        this.empId = this.route.snapshot.params['empId'];
 
-         this.employeeService.getEmployee(this.empId).subscribe( (data:any) => {
-         this.employee = data;
+         this.employeeService.getEmployee(this.id).subscribe( (data:any) => {
+         this.employees= data;
        });
     }
   }
