@@ -21,7 +21,6 @@ export class HomeComponent {
 
  delete(Id:number){
   this.service.deleteEmployee(Id).subscribe( data => {
-    console.log(data);
     this.service.getEmployeeAll();
   })
 }
