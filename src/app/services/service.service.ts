@@ -41,8 +41,8 @@ export class ServiceService {
     return this.http.get(this.url+empId)
   }*/
 
-  addEmployee(body:any){
-    return this.http.post(this.url,body)
+  addEmployee(val:any){
+    return this.http.post(this.url,val)
   }
 
   updateEmployee(id:number,body:any){
