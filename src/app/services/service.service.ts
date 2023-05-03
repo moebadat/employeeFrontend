@@ -50,6 +50,6 @@ export class ServiceService {
   }
 
   deleteEmployee(id:any){
-    return this.http.delete(this.url+id)
+    return this.http.delete(this.url+'/'+id)
   }
 }
