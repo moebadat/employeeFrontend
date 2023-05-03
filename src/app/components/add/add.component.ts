@@ -20,12 +20,12 @@ throw new Error('Method not implemented.');
 
   constructor(private _fb :FormBuilder, private _empService: ServiceService, private http: HttpClient ){
     this.empForm = this._fb.group({
-      EmployeeID : "",
-      Name :"",
-      Surname:"",
-      Email:"",
-      Contact: "",
-      Department:"",
+      //Emp_Id : "",
+      name :"",
+      surname:"",
+      email:"",
+      contactNo: "",
+      department:"",
     });
   }
 
