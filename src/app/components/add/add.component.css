@@ -50,3 +50,9 @@ button{
     border-radius: 3rem;
 }
 
+span{
+    color:red;
+    font-style: italic;
+    font-size: small;
+}
+
