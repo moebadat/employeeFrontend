@@ -42,14 +42,14 @@ export class ServiceService {
   }*/
 
   addEmployee(body:any){
-    this.http.post(this.url,body)
+    return this.http.post(this.url,body)
   }
 
   updateEmployee(id:number,body:any){
       return this.http.put(this.url+id,body)
   }
 
- deleteEmployee(id:any){
+  deleteEmployee(id:any){
     return this.http.delete(this.url+id)
   }
 }
