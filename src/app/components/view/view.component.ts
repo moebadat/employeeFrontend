@@ -28,6 +28,7 @@ export class ViewComponent implements OnInit {
 
          this.employeeService.getEmployee(this.empId).subscribe( (data:any) => {  
          this.employee= data;
+
        });
     }
   }
