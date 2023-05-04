@@ -21,6 +21,18 @@ export class HomeComponent {
       });
  }
 
+
+ delete(Id:number){
+  this.service.deleteEmployee(Id).subscribe( data => {
+    this.ngOnInit(); 
+    this.service.getEmployeeAll();
+  })
+}
+
+setId(Id:any){
+  localStorage.setItem("id",Id)
+}
+
   delete(Id:number){
     this.service.deleteEmployee(Id).subscribe( data => {
       this.service.getEmployeeAll();

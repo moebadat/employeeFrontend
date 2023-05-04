@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Employee } from '../employee';
 
 @Injectable({
   providedIn: 'root'
@@ -45,8 +46,8 @@ export class ServiceService {
     return this.http.post(`${this.url}`,val)
   }
 
-  updateEmployee(id:number,body:any){
-      return this.http.put(`${this.url}/${id}`, body)
+  updateEmployee(val:any,id:any){
+      return this.http.put(`${this.url}/${id}`, val)
   }
 
   deleteEmployee(id:any){
