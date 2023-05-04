@@ -23,13 +23,9 @@
       <td>{{item.department}}</td>
       <td>{{item.contactNo}}</td>
       <td class="btn_structucture">
-        <button type="button" class="btn btn-primary" routerLink="/view">View</button>
+        <button type="button" class="btn btn-primary" (click)="viewEmployee(item.empId)">View</button>
         <button type="button"  class="btn btn-success" routerLink="/update">UPDATE</button>
-<<<<<<< HEAD
       <button type="button" (click)= "delete(item.empId)" class="btn btn-danger">DELETE</button>
-=======
-      <button type="button" (click) = "delete(item.empId)" class="btn btn-danger">DELETE</button>
->>>>>>> c49bab61528d8e8f70689787338d7fac3ce6db2a
       </td>
     </tr>
   </tbody>
