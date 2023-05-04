@@ -76,12 +76,6 @@ successNotification(){
   }
 
 
-  goToEmployeeList(){
-    this.router.navigate(['/'])
-  }
-
-
-
 }
 
 
