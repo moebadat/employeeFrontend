@@ -11,15 +11,25 @@ form{
 .container{
     background-color: #f4f4f4;
     border-radius: 5px;
+    width: 957px;
+    height: 550px;
+    padding-top: 20px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 h1{
     text-align: center;
     padding-top: 2rem;
     background-color: rgb(166, 208, 248);
-    color: white;
+    color: rgb(59, 55, 55);
+    margin-top: 60px;
     margin-left: 15rem;
     margin-right: 15rem;
     border-radius: 5px;
+    padding-bottom: 10px;
 }
 
 input{
@@ -31,6 +41,7 @@ input{
     padding-top: 20px;
     width: 25rem;
     height: 35px;
+    
 }
 
 label{
@@ -49,5 +60,28 @@ button{
     background-color: rgb(166, 208, 248);
     border-radius: 3rem;
     padding-bottom: 0px;
+}
+#empNo{
+  padding-left: 185px;
+}
+#name{
+ padding-left: 175px;
+
+}
+
+#surname{
+ padding-left: 180px;
+}
+
+#email{
+ padding-left: 155px;
+}
+
+#contactNo{
+padding-left: 155px;
+}
+
+#department{
+padding-left: 180px;
 }
 
