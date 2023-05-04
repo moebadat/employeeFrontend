@@ -1,41 +1,41 @@
 <h1>Update Employee</h1>
 
 <div class="container">
-<form id="updateForm" onsubmit="return false">
-    <div>
+<form (ngSubmit)="update()" >
+    <div >
     <label>Employee's ID: </label>
-    <input type="text" id="empNo" placeholder="Enter The Employee's ID." name="Employee ID">      
+    <input type="text" id="empNo" [(ngModel)]="this.id" name="Employee ID">      
     <br>
     </div>
     <div>
     <label>Name: </label>
-    <input id= "name"type="text" id="name" placeholder="Enter The Employee's Name." name="Name">
+    <input id= "name"type="text" id="name" [(ngModel)]="this.name" name="Name">
     <br>
     </div>
     <div>
     <label>Surname:</label>
-    <input id="surname" type="text" placeholder="Enter The Employee's Surname." name="Surname">
+    <input id="surname" type="text" [(ngModel)]="this.surname" name="Surname">
     <br>
     </div>
     <div>
     <label>Email Address: </label>
-    <input type="text" placeholder="Enter The Employee's Email Address." name="Email">
+    <input type="text" [(ngModel)]="this.email" name="Email">
     <br>
     </div>
     
     <div>
         <label>Contact Number:</label>
-        <input type="text" placeholder="Enter The Employee's Contact Number" formControlName="Contact">
+        <input type="text" [(ngModel)]="this.contactNo" name="contactNo">
     <br>
     </div>
     <div>
         <label>Department:</label>
-        <input type="text" placeholder="Enter The Employee's Department" formControlName="Department">
+        <input type="text"[(ngModel)]="this.department" name="department">
         <br>
     </div>
    
 
-    <button onclick="getUpdatedEmployee()">Update</button> 
+    <button type="submit">Update</button> 
 
 </form>
 </div>

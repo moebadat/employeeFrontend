@@ -11,7 +11,7 @@ const routes: Routes = [
   {path : '', component : HomeComponent},
   {path : 'add', component : AddComponent},
   {path : 'update', component : UpdateComponent},
-  {path : 'view', component : ViewComponent}];
+  {path : 'view/:id', component : ViewComponent}];
 
 
 @NgModule({
