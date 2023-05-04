@@ -31,10 +31,5 @@ export class HomeComponent {
     this.router.navigate(['/view/' + id])
     
   }
- delete(Id:number){
-  this.service.deleteEmployee(Id).subscribe( data => {
-    this.ngOnInit(); 
-    this.service.getEmployeeAll();
-  })
 }
-}
+
