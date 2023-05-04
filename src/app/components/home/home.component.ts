@@ -25,4 +25,8 @@ export class HomeComponent {
     this.service.getEmployeeAll();
   })
 }
+
+setId(Id:any){
+  localStorage.setItem("id",Id)
+}
 }
