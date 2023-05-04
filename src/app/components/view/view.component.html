@@ -1,6 +1,6 @@
 <h2 class="block">View Employee</h2>
 <div class="container">
-<div>
+<div *ngFor="let employee of employees">
     <div>
         <label> <b> First Name: </b></label> {{employee?.name}}
     </div>

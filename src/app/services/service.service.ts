@@ -31,25 +31,25 @@ export class ServiceService {
 
 
   getEmployeeAll(){
-    return this.http.get(this.url)
+    return this.http.get(`${this.url}`)
   }
   
   getEmployee(empId:any): Observable<any[]>{
-    return this.http.get<any>(`http://localhost:8080/employees${empId}`)
+    return this.http.get<any>(`${this.url}/${empId}`)
   }
   /*getEmployee(empId:number){
     return this.http.get(this.url+empId)
   }*/
 
   addEmployee(val:any){
-    return this.http.post(this.url,val)
+    return this.http.post(`${this.url}`,val)
   }
 
   updateEmployee(id:number,body:any){
-      return this.http.put(this.url+id,body)
+      return this.http.put(`${this.url}/${id}`, body)
   }
 
   deleteEmployee(id:any){
-    return this.http.delete(this.url+'/'+id)
+    return this.http.delete(`${this.url}/${id}`)
   }
 }
