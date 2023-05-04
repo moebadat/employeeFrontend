@@ -32,12 +32,6 @@ export class HomeComponent {
 setId(Id:any){
   localStorage.setItem("id",Id)
 }
-
-  delete(Id:number){
-    this.service.deleteEmployee(Id).subscribe( data => {
-      this.service.getEmployeeAll();
-    })
-  }
   viewEmployee(id: number) {
     console.log("Id on home", id);
     this.router.navigate(['/view/' + id])
