@@ -21,6 +21,7 @@ export class HomeComponent {
 
  delete(Id:number){
   this.service.deleteEmployee(Id).subscribe( data => {
+    this.ngOnInit(); 
     this.service.getEmployeeAll();
   })
 }
