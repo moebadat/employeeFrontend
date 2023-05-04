@@ -35,7 +35,7 @@ export class ServiceService {
   }
   
   getEmployee(empId:any): Observable<any[]>{
-    return this.http.get<any>(`http://localhost:8080/employees${empId}`)
+    return this.http.get<any>(`http://localhost:8080/employees/${empId}`)
   }
   /*getEmployee(empId:number){
     return this.http.get(this.url+empId)
