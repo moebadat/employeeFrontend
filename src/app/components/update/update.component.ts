@@ -43,11 +43,11 @@ export class UpdateComponent implements OnInit {
       }
       getdata(){
         this.service.getEmployee(this.id).subscribe((data:any)=>{
-          this.namePlaceholder=data.name;
-          this.surnamePlaceholder=data.surname;
-          this.emailPlaceholder=data.email;
-          this.contactNoPlaceholder=data.contactNo;
-          this.departmentPlaceholder=data.department;
+          this.name=data.name;
+          this.surname=data.surname;
+          this.email=data.email;
+          this.contactNo=data.contactNo;
+          this.department=data.department;
         }
        
      ) }
