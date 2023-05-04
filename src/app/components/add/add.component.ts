@@ -13,8 +13,8 @@ import Swal from 'sweetalert2';
   styleUrls: ['./add.component.css']
 })
 export class AddComponent implements OnInit{
-  location: any;
-submitted: any;
+
+
 
 successNotification(){
   Swal.fire('Employee added successfully')
@@ -27,7 +27,6 @@ successNotification(){
 
   constructor(private _fb :FormBuilder, private _empService: ServiceService, private http: HttpClient, private router: Router){
     this.empForm = this._fb.group({
-      //Emp_Id : "",
       name :new FormControl("", [Validators.required]),
       surname:new FormControl("", [Validators.required]),
       email:new FormControl("", [Validators.required,Validators.email],),
@@ -45,7 +44,6 @@ successNotification(){
   get name(){
     return this.empForm.get('name');
   }
-
   get surname(){
     return this.empForm.get('surname');
   }
@@ -62,6 +60,8 @@ successNotification(){
       if(this.empForm.valid){
         this._empService.addEmployee(this.empForm.value).subscribe({
           next: (val: any) => {
+          alert("Employee added successfully");
+          this.empForm.reset();
           },
         
           error: (err: any) => {
@@ -82,10 +82,6 @@ successNotification(){
 
 
 
-
 }
 
 
-//function successNotification() {
-  //throw new Error('Function not implemented.');
-//}

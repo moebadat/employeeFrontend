@@ -8,7 +8,7 @@
     <br>
     -->
     </div>
-<div *ngIf ="!submitted">
+<div>
     <div>
     <label>First Name: </label>
     <input id= "name"type="text" placeholder="Enter The Employee's Name." formControlName="name">
@@ -38,8 +38,7 @@
         <input type="text" placeholder="Enter The Employee's Department" formControlName="department">
     </div>
     <span *ngIf="department && department.invalid &&department.touched">*Please enter a department</span>
-    
-    <button type="submit">Submit</button>
+    <button type="submit" >Submit</button>
 
 </div>
 </form>
