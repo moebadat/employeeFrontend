@@ -1,7 +1,9 @@
+import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup,Validators } from '@angular/forms';
 import { ServiceService } from 'src/app/services/service.service';
+import Swal from 'sweetalert2';
 
 
 
@@ -10,9 +12,12 @@ import { ServiceService } from 'src/app/services/service.service';
   templateUrl: './add.component.html',
   styleUrls: ['./add.component.css']
 })
-export class AddComponent{
-onSubmit() {
-throw new Error('Method not implemented.');
+export class AddComponent implements OnInit{
+  location: any;
+submitted: any;
+
+successNotification(){
+  Swal.fire('Employee added successfully')
 }
 
 
@@ -20,7 +25,7 @@ throw new Error('Method not implemented.');
 
 
 
-  constructor(private _fb :FormBuilder, private _empService: ServiceService, private http: HttpClient ){
+  constructor(private _fb :FormBuilder, private _empService: ServiceService, private http: HttpClient, private router: Router){
     this.empForm = this._fb.group({
       //Emp_Id : "",
       name :new FormControl("", [Validators.required]),
@@ -57,24 +62,30 @@ throw new Error('Method not implemented.');
       if(this.empForm.valid){
         this._empService.addEmployee(this.empForm.value).subscribe({
           next: (val: any) => {
-            alert('Employee added successfully');
           },
+        
           error: (err: any) => {
             console.error (err);
           },
           
         });
+      
     }
-  
-
 
 
   }
 
 
-
+  goToEmployeeList(){
+    this.router.navigate(['/'])
+  }
 
 
 
 
 }
+
+
+//function successNotification() {
+  //throw new Error('Function not implemented.');
+//}
