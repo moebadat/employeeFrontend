@@ -1,13 +1,15 @@
 <h1>Add A New Employee</h1>
 
 <div class="container">
-<form [formGroup]="empForm" (ngSubmit)="onFormSubmit()" ngSubmit = false>
+
+<form [formGroup]="empForm" (ngSubmit)="onFormSubmit()" ngSubmit = True>
     <div>
     <!--<label>Employee's ID: </label>
     <input type="text" placeholder="Enter The Employee's ID." formControlName="EmpId">      
     <br>
     -->
     </div>
+<div>
     <div>
     <label>First Name: </label>
     <input id= "name"type="text" placeholder="Enter The Employee's Name." formControlName="name">
@@ -41,12 +43,7 @@
     <button  class="btn1" routerLink="/">Cancel</button>
     <button class="btn2" type="submit"  >Submit</button>
 
-
-
-
-
-
-
-
 </form>
 </div>
+
+
