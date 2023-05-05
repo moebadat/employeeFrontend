@@ -19,7 +19,7 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
 }
-.container{
+.contain{
 
     margin-top: 50px;
     background-color: rgb(166, 208, 248);
@@ -28,4 +28,6 @@
     border-width: 0.5px;
     border-color: rgb(59, 55, 55);
   }
+
+  
 
