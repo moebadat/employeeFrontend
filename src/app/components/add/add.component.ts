@@ -60,7 +60,7 @@ successNotification(){
       if(this.empForm.valid){
         this._empService.addEmployee(this.empForm.value).subscribe({
           next: (val: any) => {
-            alert('Employee added successfully');
+      
             this.empForm.reset();
 
           },
