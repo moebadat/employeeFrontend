@@ -29,7 +29,7 @@
     <span *ngIf="email && email.invalid &&email.touched">*The email is not valid</span>
     <div>
         <label>Contact Number: </label>
-        <input type="text"  formControlName="contactNo">
+        <input type="text" class="form-control" formControlName="contactNo">
     <br>
     <span *ngIf="contactNumber && contactNumber.invalid &&contactNumber.touched">*Enter the correct contact number </span>
     </div>
@@ -40,7 +40,8 @@
     <span *ngIf="department && department.invalid &&department.touched">*Please enter a department</span><br>
 
     <button  class="btn1" routerLink="/">Cancel</button>
-    <button class="btn2" type="submit"  [disabled]="!empForm.valid" (click)="successNotification()" >Submit</button>
+    <button class="btn2" type="submit"  [disabled]="!empForm.valid" (click)="successNotification()"
+        >Submit</button>
 </form>
-/<div>
+</div>
    
