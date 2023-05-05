@@ -1,5 +1,5 @@
 .heading{
-    color:rgb(59, 55, 55);
+    color:#212529;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     margin-top: 30px ;
     text-align: center; 
@@ -15,7 +15,7 @@
 }
 
 .thead-dark{
-    color:rgb(166,208, 248);
+    color: #212529;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
 }
