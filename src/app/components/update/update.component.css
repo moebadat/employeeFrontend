@@ -12,7 +12,7 @@ form{
     background-color: #f4f4f4;
     border-radius: 5px;
     width: 957px;
-    height: 550px;
+    height: 600px;
     padding-top: 20px;
     margin: auto;
     display: flex;
@@ -47,6 +47,9 @@ input{
     width: 25rem;
     height: 35px;
     
+}
+p{
+    font-size: larger;
 }
 
 label{
@@ -97,4 +100,3 @@ padding-left: 155px;
 #department{
 padding-left: 180px;
 }
-
