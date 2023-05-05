@@ -53,7 +53,7 @@ label{
     font-size: larger;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-inline-start: 1rem;
-    padding-left: 1x;
+    padding-left: 1px;
     margin-right: 20px;
 
 }
@@ -65,8 +65,15 @@ button{
     background-color: rgb(166, 208, 248);
     border-radius: 3rem;
     padding-bottom: 0px;
-    margin-left: 145px;
+    
 }
+.btn1{
+    margin-right: 60px;
+}
+.btn2{
+    margin-left: 30px;
+}
+
 #empNo{
   padding-left: 185px;
 }
