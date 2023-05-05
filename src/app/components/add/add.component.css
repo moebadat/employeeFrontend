@@ -1,5 +1,4 @@
 form{
-    text-align: center;
     padding-top: 6rem;
     padding-bottom: 6rem;
     margin-left: 15rem;
@@ -11,15 +10,30 @@ form{
 .container{
     background-color: #f4f4f4;
     border-radius: 5px;
+    width: 957px;
+    height: 550px;
+    padding-top: 20px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: rgb(59, 55, 55);
 }
 h1{
     text-align: center;
     padding-top: 2rem;
     background-color: rgb(166, 208, 248);
-    color: white;
+    color: rgb(59, 55, 55);
+    margin-top: 60px;
     margin-left: 15rem;
     margin-right: 15rem;
     border-radius: 5px;
+    padding-bottom: 10px;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: rgb(59, 55, 55);
 }
 
 input{
@@ -37,7 +51,7 @@ label{
     font-size: larger;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-inline-start: 1rem;
-    text-align: center;
+    padding-left: 1px;
     margin-right: 20px;
 
 }
@@ -48,11 +62,18 @@ button{
     height: 3rem;
     background-color: rgb(166, 208, 248);
     border-radius: 3rem;
+ 
 }
-
+.btn1{
+    margin-right: 60px;
+}
+.btn2{
+    margin-left: 30px;
+}
 span{
     color:red;
     font-style: italic;
     font-size: small;
+    padding-bottom: 2px;
 }
 

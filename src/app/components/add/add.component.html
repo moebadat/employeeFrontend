@@ -1,6 +1,6 @@
 <h1>Add A New Employee</h1>
 
-
+<div class="container">
 <form [formGroup]="empForm" (ngSubmit)="onFormSubmit()" ngSubmit = false>
     <div>
     <!--<label>Employee's ID: </label>
@@ -36,8 +36,11 @@
         <label>Department:</label>
         <input type="text" placeholder="Enter The Employee's Department" formControlName="department">
     </div>
-    <span *ngIf="department && department.invalid &&department.touched">*Please enter a department</span>
-    <button type="submit"  >Submit</button>
+    <span *ngIf="department && department.invalid &&department.touched">*Please enter a department</span><br>
+
+    <button  class="btn1" routerLink="/">Cancel</button>
+    <button class="btn2" type="submit"  >Submit</button>
+
 
 
 
@@ -46,4 +49,4 @@
 
 
 </form>
-
+</div>
