@@ -1,42 +1,65 @@
 <h1>Update Employee</h1>
 
 <div class="container">
-<form (ngSubmit)="update()" >
-    <div >
-    <label>Employee's ID: </label>
-    <h4 type="text" id="empNo" >{{this.id}}</h4>    
-    <br>
-    </div>
-    <div>
-    <label>Name: </label>
-    <input id= "name"type="text" id="name" [(ngModel)]="this.name" name="Name">
-    <br>
-    
-    </div>
-    <div>
-    <label>Surname:</label>
-    <input id="surname" type="text" [(ngModel)]="this.surname" name="Surname">
-    <br>
-    </div>
-    <div>
-    <label>Email Address: </label>
-    <input id="email" type="text" [(ngModel)]="this.email" name="Email">
-    <br>
-    </div>
-    
-    <div>
-        <label>Contact Number:</label>
-        <input id="contactNo" type="text" [(ngModel)]="this.contactNo" name="contactNo">
-    <br>
-    </div>
-    <div>
-        <label>Department:</label>
-        <input  id="department" type="text"[(ngModel)]="this.department" name="department">
-        <br>
-    </div>
-   
-    <button  class="btn1" routerLink="/">Cancel</button>
-    <button  class="btn2" type="submit" >Update</button> 
 
-</form>
+
+  <form (ngSubmit)="update()" > <!-- [formGroup]="updateForm" #formDir="ngForm" -->
+
+          <!-- <div>
+            <label>Employee's ID: </label>
+            <h4 type="text" id="empNo">{{ this.id }}</h4>
+            <br />
+          </div>  -->
+
+          <div>
+            <label>Name: </label>
+            <input
+              id="name"
+              type="text"
+              id="name"
+              [(ngModel)]="this.name"
+              name="Name"
+            />
+            
+              <br />
+            </div>
+            <div>
+
+              <label>Surname:</label>
+              <input
+                id="surname"
+                type="text"
+                [(ngModel)]="this.surname"
+                name="Surname"
+            
+              />
+
+            <div>
+              <label>Email Address: </label>
+              <input
+                id="email"
+                type="text"
+                [(ngModel)]="this.email"
+                name="Email"
+              />
+              <br />
+
+             
+            <div>
+              <label>Department:</label>
+              <input
+                id="department"
+                type="text"
+                [(ngModel)]="this.department"
+                name="department"
+              />
+              <br />
+            </div>
+
+            <button class="btn1" routerLink="/">Cancel</button>
+            <button class="btn2" type="submit">Update</button>
+          </div>
+        </div>
+  </form>
 </div>
+
