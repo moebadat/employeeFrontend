@@ -3,13 +3,14 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Employee } from 'src/app/employee';
 import { ServiceService } from 'src/app/services/service.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-update',
   templateUrl: './update.component.html',
   styleUrls: ['./update.component.css']
 })
-export class UpdateComponent implements OnInit {
+export class UpdateComponent implements OnInit {  
   id=localStorage.getItem("id");
   
   name!:string;
@@ -23,6 +24,8 @@ export class UpdateComponent implements OnInit {
   emailPlaceholder!:string;
   contactNoPlaceholder!:string;
   departmentPlaceholder!:string;
+
+
 
 
   

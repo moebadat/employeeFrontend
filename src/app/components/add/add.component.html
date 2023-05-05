@@ -41,9 +41,15 @@
     <span *ngIf="department && department.invalid &&department.touched">*Please enter a department</span><br>
 
     <button  class="btn1" routerLink="/">Cancel</button>
+<<<<<<< HEAD
     <button class="btn2" type="submit"  >Submit</button>
 </div>
 </form>
+=======
+    <button class="btn2" type="submit"  [disabled]="!empForm.valid" (click)="successNotification()" >Submit</button>
+
+
+>>>>>>> 5443a39033246238bf026d2ca48adebeaa89a8ee
 </div>
 
 
