@@ -1,36 +1,56 @@
 <div class="container">
-<h1 class="heading">List of Employees</h1>
-<!-- This is a test -->
+  <h1 class="heading">List of Employees</h1>
+  <!-- start of table -->
   <div class="table-responsive" id="no-more-tables">
-<table class="table table-hover">
-  <thead class="thead-dark">
-    <tr>
-      <th>ID</th>
-      <th>First name</th>
-      <th>Last Name</th>
-      <th>Email</th>
-      <th>Department</th>
-      <th>Contact number</th>
-      <th >Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let item of items">
-      <td data-title="ID">{{item.empId}}</td>
-      <td data-title="First name">{{item.name}}</td>
-      <td data-title="Last ">{{item.surname}}</td>
-      <td data-title="Email">{{item.email}}</td>
-      <td data-title="Department">{{item.department}}</td>
-      <td data-title="Contact Number">0{{item.contactNo}}</td>
-      <td class="btn_structucture">
-        <button type="button" class="btn btn-primary" (click)="viewEmployee(item.empId)">View</button>
-        <button type="button" (click) = "setId(item.empId)"  class="btn btn-success" routerLink="/update">UPDATE</button>
-      <button type="button" (click) = "deleteConfirmation(item.empId)" class="btn btn-danger"  >DELETE</button>
-      </td>
-    </tr>
-  </tbody>
-</table>
+    <table class="table table-hover">
+      <!-- table headings -->
+      <thead class="thead-dark">
+        <tr>
+          <th>ID</th>
+          <th>First name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Department</th>
+          <th>Contact number</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- for each row display the following columns -->
+        <tr *ngFor="let item of items">
+          <td data-title="ID">{{ item.empId }}</td>
+          <td data-title="First name">{{ item.name }}</td>
+          <td data-title="Last ">{{ item.surname }}</td>
+          <td data-title="Email">{{ item.email }}</td>
+          <td data-title="Department">{{ item.department }}</td>
+          <td data-title="Contact Number">0{{ item.contactNo }}</td>
+          <td class="btn_structucture">
+            <!-- buttons/Actions -->
+            <button
+              type="button"
+              class="btn btn-primary"
+              (click)="viewEmployee(item.empId)"
+            >
+              View
+            </button>
+            <button
+              type="button"
+              (click)="setId(item.empId)"
+              class="btn btn-success"
+              routerLink="/update"
+            >
+              UPDATE
+            </button>
+            <button
+              type="button"
+              (click)="deleteConfirmation(item.empId)"
+              class="btn btn-danger"
+            >
+              DELETE
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
-</div>
-
-
