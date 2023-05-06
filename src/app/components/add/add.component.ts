@@ -15,17 +15,20 @@ import Swal from 'sweetalert2';
 export class AddComponent implements OnInit{
 
 
-
+// function that displays a success notification when an employee is added
 successNotification(){
   Swal.fire('Employee added successfully')
 }
 
-
+//an instance of the add form
   empForm : FormGroup;
 
 
 
   constructor(private _fb :FormBuilder, private _empService: ServiceService, private http: HttpClient, private router: Router){
+
+
+//form builder group where values from fields within the form a validated
     this.empForm = this._fb.group({
       name :new FormControl("", [Validators.required]),
       surname:new FormControl("", [Validators.required]),
@@ -41,6 +44,7 @@ successNotification(){
     
   }
 
+  //get methods that reuturn the values of fields in the add form
   get name(){
     return this.empForm.get('name');
   }
@@ -56,15 +60,18 @@ successNotification(){
   get department(){
     return this.empForm.get('department');
   }
+
+  //When the form is submitted 
   onFormSubmit(){
+    //If the form passes all the validations, invoke the http ass method and pass the form values as an argument
       if(this.empForm.valid){
         this._empService.addEmployee(this.empForm.value).subscribe({
           next: (val: any) => {
-      
+            // once the employee has been addedng, display the success notification and reset the form
+           this.successNotification();
             this.empForm.reset();
-
           },
-        
+          // log a console error if the employee was not deleted
           error: (err: any) => {
             console.error (err);
           },

@@ -1,15 +1,11 @@
 <h1>Add A New Employee</h1>
-
+<!-- start of form, that invokes the onFormSubmit() function when the submit button is clicked -->
 <div class="container">
-
 <form [formGroup]="empForm" (ngSubmit)="onFormSubmit()" ngSubmit = True>
     <div>
-    <!--<label>Employee's ID: </label>
-    <input type="text" placeholder="Enter The Employee's ID." formControlName="EmpId">      
-    <br>
-    -->
     </div>
     <div>
+        <!-- labels and inputs that are validated using ngIF, for builder group in ts and are tetested to see if they are valid and not empty -->
     <label>First Name: </label>
     <input id= "name"type="text" class="form-control"formControlName="name">
     <br>
@@ -39,8 +35,9 @@
     </div>
     <span *ngIf="department && department.invalid &&department.touched">*Please enter a department</span><br>
 
+     <!-- form submit button that is disabled unless all entered values are valid and a cancel button that routes back to home -->
     <button  class="btn1" routerLink="/">Cancel</button>
-    <button class="btn2" type="submit"  [disabled]="!empForm.valid" (click)="successNotification()"
+    <button class="btn2" type="submit"  [disabled]="!empForm.valid"
         >Submit</button>
 </form>
 </div>
