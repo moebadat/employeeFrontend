@@ -73,8 +73,6 @@ export class UpdateComponent implements OnInit {
       .subscribe((res) => {
         //notify user that the record has been updated once a response is recieved 
         this.UpdateNotification();
-
-        this.updateForm.reset;
         //refresh data after it has been updated 
         this.getdata();
       });
