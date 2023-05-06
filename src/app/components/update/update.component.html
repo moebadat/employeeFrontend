@@ -3,7 +3,7 @@
 <div class="container">
 
  <!-- A form that calls the updat() methos that edits the details of an employee when it is submitted -->
-  <form (ngSubmit)="update()" > 
+  <form [formGroup]="updateForm"  (ngSubmit)="update()" ngSubmit = True> 
 <!-- the forms' labels and inputs that are initially populated using values of fields obtained from  the getData method
  which gets am employee record via id, which is obtained using local storage -->
           <div>
@@ -12,12 +12,12 @@
               class="form-control"
               id="name"
               type="text"
-              id="name"
-              [(ngModel)]="this.name"
-              name="Name"
+              value="{{this.name}}"
+             formControlName="name" 
             />
             
-              <br />
+              <br/>
+              <span  *ngIf="name && name.invalid &&name.touched">*The name needs to be included</span>
             </div>
             <div>
 
@@ -26,10 +26,12 @@
                 class="form-control"
                 id="surname"
                 type="text"
-                [(ngModel)]="this.surname"
-                name="Surname"
+                value="{{this.surname}}"
+                formControlName="surname" 
             
               />
+              <br/>
+              <span *ngIf="surname && surname.invalid &&surname.touched">*The Surname needs to be included</span>
 
             <div>
               <label>Email Address: </label>
@@ -37,10 +39,25 @@
                 class="form-control"
                 id="email"
                 type="text"
-                [(ngModel)]="this.email"
+                value="{{this.email}}"
                 name="Email"
               />
               <br />
+              <span *ngIf="email && email.invalid &&email.touched">*The email is not valid</span>
+
+     
+
+                <label>Coontact No:</label>
+                <input
+                  class="form-control"
+                  id="contactNo"
+                  type="text"
+                  value="{{this.contactNo}}"
+                  name="contactNo"
+                />
+                <br />
+                <span *ngIf="contactNo && contactNo.invalid &&contactNo.touched">*Enter the correct contact number </span>
+
 
              
             <div>
@@ -49,10 +66,12 @@
                 class="form-control"
                 id="department"
                 type="text"
-                [(ngModel)]="this.department"
+                value="{{this.department}}"
                 name="department"
               />
               <br />
+              <span *ngIf="department && department.invalid &&department.touched">*Please enter a department</span><br>
+
             </div>
            <!-- from submit button and a cancel button to navigate back to the homepage -->
             <button class="btn1" routerLink="/">Home</button>

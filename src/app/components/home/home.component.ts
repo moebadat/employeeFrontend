@@ -28,7 +28,7 @@ export class HomeComponent {
         // delete confirmation
         Swal.fire(
           'Deleted!',
-          'Your imaginary file has been deleted.',
+          'The record has been deleted!',
           'success'
         )
         // reload the page
@@ -38,7 +38,7 @@ export class HomeComponent {
       } else if (result.dismiss === Swal.DismissReason.cancel) {
         Swal.fire(
           'Cancelled',
-          'Your imaginary file is safe :)',
+          'The record is safe',
           'error'
         )
       }

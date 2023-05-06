@@ -7,7 +7,7 @@
     <div>
         <!-- labels and inputs that are validated using ngIF, for builder group in ts and are tetested to see if they are valid and not empty -->
     <label>First Name: </label>
-    <input id= "name"type="text" class="form-control"formControlName="name">
+    <input id= "name"type="text" class="form-control"formControlName="name" required>
     <br>
     <span  *ngIf="name && name.invalid &&name.touched">*The name needs to be included</span>
     </div>

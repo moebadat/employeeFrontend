@@ -22,20 +22,30 @@ export class UpdateComponent implements OnInit {
   id = localStorage.getItem("id");
  
   // declare variable
-  name!: string;
-  surname!: string;
-  email!: string;
-  contactNo!: string;
-  department!: string;
+  name!: any;
+  surname!: any;
+  email!: any;
+  contactNo!: any;
+  department!: any;
 
   // create an instance of the update form
-  updateForm!: FormGroup;
+  updateForm: FormGroup;
 
-  constructor(
+  constructor(private fb:FormBuilder,
     private service: ServiceService,
     private route: ActivatedRoute,
     private router: Router
-  ) {}
+  ) {
+    this.updateForm = this.fb.group({
+      name :new FormControl("", [Validators.required]),
+      surname:new FormControl("", [Validators.required]),
+      email:new FormControl("", [Validators.required,Validators.email],),
+      contactNo: new FormControl("", [Validators.required, Validators.maxLength(10), Validators.minLength(10)]),
+      department:new FormControl("", [Validators.required]),
+    });
+  }
+
+  
 
   UpdateNotification(){
     Swal.fire('Employee has been updated')
@@ -61,8 +71,11 @@ export class UpdateComponent implements OnInit {
         this.id
       )
       .subscribe((res) => {
+        //notify user that the record has been updated once a response is recieved 
         this.UpdateNotification();
-        // navigate to home after obtaining a response
+
+        this.updateForm.reset;
+        //refresh data after it has been updated 
         this.getdata();
       });
   }
