@@ -36,7 +36,7 @@
     <span *ngIf="department && department.invalid &&department.touched">*Please enter a department</span><br>
 
      <!-- form submit button that is disabled unless all entered values are valid and a cancel button that routes back to home -->
-    <button  class="btn1" routerLink="/">Cancel</button>
+    <button  class="btn1" routerLink="/">Home</button>
     <button class="btn2" type="submit"  [disabled]="!empForm.valid"
         >Submit</button>
 </form>

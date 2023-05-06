@@ -2,15 +2,10 @@
 
 <div class="container">
 
-
-  <form (ngSubmit)="update()" > <!-- [formGroup]="updateForm" #formDir="ngForm" -->
-
-          <!-- <div>
-            <label>Employee's ID: </label>
-            <h4 type="text" id="empNo">{{ this.id }}</h4>
-            <br />
-          </div>  -->
-
+ <!-- A form that calls the updat() methos that edits the details of an employee when it is submitted -->
+  <form (ngSubmit)="update()" > 
+<!-- the forms' labels and inputs that are initially populated using values of fields obtained from  the getData method
+ which gets am employee record via id, which is obtained using local storage -->
           <div>
             <label>Name: </label>
             <input
@@ -59,8 +54,8 @@
               />
               <br />
             </div>
-
-            <button class="btn1" routerLink="/">Cancel</button>
+           <!-- from submit button and a cancel button to navigate back to the homepage -->
+            <button class="btn1" routerLink="/">Home</button>
             <button class="btn2" type="submit">Update</button>
           </div>
         </div>

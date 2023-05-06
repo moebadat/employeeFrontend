@@ -17,20 +17,18 @@ import Swal from "sweetalert2";
   styleUrls: ["./update.component.css"],
 })
 export class UpdateComponent implements OnInit {
-  id = localStorage.getItem("id");
 
+  // obtain the value of id using the local storage option provided by the browser
+  id = localStorage.getItem("id");
+ 
+  // declare variable
   name!: string;
   surname!: string;
   email!: string;
   contactNo!: string;
   department!: string;
 
-  namePlaceholder!: string;
-  surnamePlaceholder!: string;
-  emailPlaceholder!: string;
-  contactNoPlaceholder!: string;
-  departmentPlaceholder!: string;
-
+  // create an instance of the update form
   updateForm!: FormGroup;
 
   constructor(
@@ -39,10 +37,17 @@ export class UpdateComponent implements OnInit {
     private router: Router
   ) {}
 
+  UpdateNotification(){
+    Swal.fire('Employee has been updated')
+  }
+  
+
+  // when the component is called, the getData() method which gets the data of an individual employee using thier id is invoked
   ngOnInit(): void {
     this.getdata();
   }
-
+ /*  update method that appends employee information by invoking the updateEmployee http function and passing the employees 
+  details obtained from the form and id from local storage as arguments */
   update() {
     this.service
       .updateEmployee(
@@ -56,9 +61,14 @@ export class UpdateComponent implements OnInit {
         this.id
       )
       .subscribe((res) => {
-        this.router.navigate([""]);
+        this.UpdateNotification();
+        // navigate to home after obtaining a response
+        this.getdata();
       });
   }
+
+  // function that gets a specific individual record by invoking  the get http method a and passing the id obtained from local stotage as an argumentL
+  //Once a repsonse is recieved, the function assigns the recieved data to variables
   getdata() {
     this.service.getEmployee(this.id).subscribe((data: any) => {
       this.name = data.name;
@@ -68,7 +78,7 @@ export class UpdateComponent implements OnInit {
       this.department = data.department;
     });
   }
-
+//function that navigates to the home page
   goToEmployeeList() {
     this.router.navigate(["/"]);
   }
