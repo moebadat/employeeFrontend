@@ -91,21 +91,22 @@ span{
   @media only screen and (max-width:800px) {
 
     h1{
-     width:45%;
-     height: 70px;
-   margin-left: 70px;
-   margin-top: 5px;
-   padding-top: 5px;
-   padding-bottom: 5px;
+        width:auto;
+        height: 70px;
+      margin-left: 0px;
+      margin-right:0px;
+      margin-top: 5px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      margin-bottom: 1px;
  
     }
     .container{
-        margin-top: 5px;
+        margin-top: 0px;
      padding: 15px;
-     width: 270px;
+     width: auto;
      padding-top: 40px;
-     margin-left: 6px;
-     height: auto;
+     margin-left: none;
     
     }
     label{

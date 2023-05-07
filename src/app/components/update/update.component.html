@@ -16,8 +16,8 @@
               [(ngModel)]="this.name"
               name="Name"
             required/>
-            
               <br />
+              <span  *ngIf="name && name.invalid &&name.touched">*The name needs to be included</span>
             </div>
             <div>
 
@@ -30,6 +30,7 @@
                 name="Surname"
             
               />
+              <br />
 
             <div>
               <label>Email Address: </label>

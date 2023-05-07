@@ -77,53 +77,34 @@ button{
     margin-left: 30px;
 }
 
-#empNo{
-  padding-left: 185px;
-}
-#name{
- padding-left: 175px;
 
-}
-
-#surname{
- padding-left: 180px;
-}
-
-#email{
- padding-left: 155px;
-}
-
-#contactNo{
-padding-left: 155px;
-}
-
-#department{
-padding-left: 180px;
-}
 
 @media only screen and (max-width:800px) {
 
     h1{
-     width:45%;
+     width:auto;
      height: 70px;
-   margin-left: 95px;
+   margin-left: 0px;
+   margin-right:0px;
    margin-top: 5px;
    padding-top: 5px;
    padding-bottom: 5px;
+   margin-bottom: 1px;
  
     }
     .container{
-        margin-top: 5px;
+        margin-top: 0px;
      padding: 15px;
      width: auto;
      padding-top: 40px;
-    
     }
     label{
+     
         margin-left: 0px;
     }
     input{
-        width:45%;
+        width:260px;
+        padding-left: 0px;
     }
     .btn1{
         padding:5px ;
@@ -135,5 +116,10 @@ padding-left: 180px;
         padding-left:5px ;
         padding: 5px;
         max-width: 80px;
+    }
+    input{
+        align-items: start;
+        justify-content: left;
+        text-align: left;
     }
  }
