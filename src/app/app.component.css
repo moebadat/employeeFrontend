@@ -11,3 +11,9 @@
             -webkit-transform: scale(1.1);
             transform: scale(1.1);
   }
+  .navbar-toggler-icon{
+    color: #f4f4f4;
+    background-color: #f4f4f4;
+  }
+
+

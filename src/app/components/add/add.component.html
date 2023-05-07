@@ -31,6 +31,7 @@
     </div>
     <div>
         <label>Department:</label>
+        <p class="fineDepartment">Choose: Sales, IT, HR, Marketing, Finance</p>
         <input type="text"  class="form-control" formControlName="department">
     </div>
     <span *ngIf="department && department.invalid &&department.touched">*Please enter a department</span><br>

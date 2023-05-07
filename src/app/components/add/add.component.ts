@@ -34,7 +34,7 @@ successNotification(){
       surname:new FormControl("", [Validators.required]),
       email:new FormControl("", [Validators.required,Validators.email],),
       contactNo: new FormControl("", [Validators.required, Validators.maxLength(10), Validators.minLength(10)]),
-      department:new FormControl("", [Validators.required]),
+      department:new FormControl("", [Validators.required, Validators.pattern('^(Sales|Finance|HR|IT|Marketing)$')]),
     });
   }
 
