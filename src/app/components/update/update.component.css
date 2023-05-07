@@ -21,20 +21,23 @@ form{
     border-style: solid;
     border-width: 0.5px;
     border-color: rgb(59, 55, 55);
+    margin-top: none;
 }
 h1{
+    width: 957px;
     text-align: center;
     padding-top: 2rem;
     background-color: rgb(166, 208, 248);
     color: rgb(59, 55, 55);
     margin-top: 35px;
-    margin-left: 15rem;
+    margin-left: 12.2rem;
     margin-right: 15rem;
     border-radius: 5px;
     padding-bottom: 10px;
     border-style: solid;
     border-width: 0.5px;
     border-color: rgb(59, 55, 55);
+    margin-bottom: none;
 }
 
 input{
