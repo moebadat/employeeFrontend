@@ -37,15 +37,30 @@ export class UpdateComponent implements OnInit {
     private router: Router
   ) {
     this.updateForm = this.fb.group({
-      name :new FormControl("", [Validators.required]),
-      surname:new FormControl("", [Validators.required]),
-      email:new FormControl("", [Validators.required,Validators.email],),
-      contactNo: new FormControl("", [Validators.required, Validators.maxLength(10), Validators.minLength(10)]),
-      department:new FormControl("", [Validators.required]),
+      Name :new FormControl("", [Validators.required]),
+      Surname:new FormControl("", [Validators.required]),
+      Email:new FormControl("", [Validators.required,Validators.email],),
+      ContactNo: new FormControl("", [Validators.required, Validators.maxLength(10), Validators.minLength(10)]),
+      Department:new FormControl("", [Validators.required]),
     });
   }
 
-  
+  get Name(){
+    return this.updateForm.get('Name');
+  }
+
+  get Surname(){
+    return this.updateForm.get('Surname');
+  }
+  get Email(){
+    return this.updateForm.get('Email');
+  }
+  get ContactNo(){
+    return this.updateForm.get('ContactNo');
+  }
+  get Department(){
+    return this.updateForm.get('Department');
+  }
 
   UpdateNotification(){
     Swal.fire('Employee has been updated')
