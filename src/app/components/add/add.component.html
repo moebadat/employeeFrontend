@@ -8,25 +8,21 @@
         <!-- labels and inputs that are validated using ngIF, for builder group in ts and are tetested to see if they are valid and not empty -->
     <label>First Name: </label>
     <input id= "name"type="text" class="form-control"formControlName="name" required>
-    <br>
     <span  *ngIf="name && name.invalid &&name.touched">*The name needs to be included</span>
     </div>
     <div>
     <label>Last Name:</label>
     <input id="surname" type="text"  class="form-control" formControlName="surname">
-    <br>
     <span *ngIf="surname && surname.invalid &&surname.touched">*The Surname needs to be included</span>
     </div>
     <div>
     <label>Email Address: </label>
     <input type="text" class="form-control" formControlName="email">
-    <br>
     </div>
     <span *ngIf="email && email.invalid &&email.touched">*The email is not valid</span>
     <div>
         <label>Contact Number: </label>
         <input type="text" class="form-control" formControlName="contactNo">
-    <br>
     <span *ngIf="contactNumber && contactNumber.invalid &&contactNumber.touched">*Enter the correct contact number </span>
     </div>
     <div>
