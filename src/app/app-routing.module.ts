@@ -7,6 +7,8 @@ import { ViewComponent } from './components/view/view.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
+
+// set paths to respective pages (components)
 const routes: Routes = [
   {path : '', component : HomeComponent},
   {path : 'add', component : AddComponent},

@@ -46,4 +46,29 @@ button{
     border-radius: 3rem;
 }
 
+@media only screen and (max-width:800px) {
+
+   
+    .block{
+        width:auto;
+        height: 70px;
+      margin-left: 0px;
+      margin-right:0px;
+      margin-top: 5px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      margin-bottom: 1px;
+      height: auto;
+ 
+    }
+    .container{
+        margin-top: 0px;
+     padding: 15px;
+     width: auto;
+     padding-top: 40px;
+     margin-left: none;
+    
+    }
+}
+
 

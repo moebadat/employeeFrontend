@@ -17,32 +17,62 @@ import Swal from "sweetalert2";
   styleUrls: ["./update.component.css"],
 })
 export class UpdateComponent implements OnInit {
+
+  // obtain the value of id using the local storage option provided by the browser
   id = localStorage.getItem("id");
+ 
+  // declare variable
+  name!: any;
+  surname!: any;
+  email!: any;
+  contactNo!: any;
+  department!: any;
 
-  name!: string;
-  surname!: string;
-  email!: string;
-  contactNo!: string;
-  department!: string;
+  // create an instance of the update form
+  updateForm: FormGroup;
 
-  namePlaceholder!: string;
-  surnamePlaceholder!: string;
-  emailPlaceholder!: string;
-  contactNoPlaceholder!: string;
-  departmentPlaceholder!: string;
-
-  updateForm!: FormGroup;
-
-  constructor(
+  constructor(private fb:FormBuilder,
     private service: ServiceService,
     private route: ActivatedRoute,
     private router: Router
-  ) {}
+  ) {
+    this.updateForm = this.fb.group({
+      Name :new FormControl("", [Validators.required]),
+      Surname:new FormControl("", [Validators.required]),
+      Email:new FormControl("", [Validators.required,Validators.email],),
+      ContactNo: new FormControl("", [Validators.required, Validators.maxLength(10), Validators.minLength(10)]),
+      Department:new FormControl("", [Validators.required]),
+    });
+  }
 
+  get Name(){
+    return this.updateForm.get('Name');
+  }
+
+  get Surname(){
+    return this.updateForm.get('Surname');
+  }
+  get Email(){
+    return this.updateForm.get('Email');
+  }
+  get ContactNo(){
+    return this.updateForm.get('ContactNo');
+  }
+  get Department(){
+    return this.updateForm.get('Department');
+  }
+
+  UpdateNotification(){
+    Swal.fire('Employee has been updated')
+  }
+  
+
+  // when the component is called, the getData() method which gets the data of an individual employee using thier id is invoked
   ngOnInit(): void {
     this.getdata();
   }
-
+ /*  update method that appends employee information by invoking the updateEmployee http function and passing the employees 
+  details obtained from the form and id from local storage as arguments */
   update() {
     this.service
       .updateEmployee(
@@ -56,9 +86,15 @@ export class UpdateComponent implements OnInit {
         this.id
       )
       .subscribe((res) => {
-        this.router.navigate([""]);
+        //notify user that the record has been updated once a response is recieved 
+        this.UpdateNotification();
+        //refresh data after it has been updated 
+        this.getdata();
       });
   }
+
+  // function that gets a specific individual record by invoking  the get http method a and passing the id obtained from local stotage as an argumentL
+  //Once a repsonse is recieved, the function assigns the recieved data to variables
   getdata() {
     this.service.getEmployee(this.id).subscribe((data: any) => {
       this.name = data.name;
@@ -68,7 +104,7 @@ export class UpdateComponent implements OnInit {
       this.department = data.department;
     });
   }
-
+//function that navigates to the home page
   goToEmployeeList() {
     this.router.navigate(["/"]);
   }

@@ -1,46 +1,40 @@
-<h1>Add A New Employee</h1>
-
+<h1>Add An Employee</h1>
+<!-- start of form, that invokes the onFormSubmit() function when the submit button is clicked -->
 <div class="container">
-
 <form [formGroup]="empForm" (ngSubmit)="onFormSubmit()" ngSubmit = True>
     <div>
-    <!--<label>Employee's ID: </label>
-    <input type="text" placeholder="Enter The Employee's ID." formControlName="EmpId">      
-    <br>
-    -->
     </div>
     <div>
+        <!-- labels and inputs that are validated using ngIF, for builder group in ts and are tetested to see if they are valid and not empty -->
     <label>First Name: </label>
-    <input id= "name"type="text" class="form-control"formControlName="name">
-    <br>
+    <input id= "name"type="text" class="form-control"formControlName="name" required>
     <span  *ngIf="name && name.invalid &&name.touched">*The name needs to be included</span>
     </div>
     <div>
     <label>Last Name:</label>
     <input id="surname" type="text"  class="form-control" formControlName="surname">
-    <br>
     <span *ngIf="surname && surname.invalid &&surname.touched">*The Surname needs to be included</span>
     </div>
     <div>
     <label>Email Address: </label>
     <input type="text" class="form-control" formControlName="email">
-    <br>
     </div>
     <span *ngIf="email && email.invalid &&email.touched">*The email is not valid</span>
     <div>
         <label>Contact Number: </label>
         <input type="text" class="form-control" formControlName="contactNo">
-    <br>
     <span *ngIf="contactNumber && contactNumber.invalid &&contactNumber.touched">*Enter the correct contact number </span>
     </div>
     <div>
         <label>Department:</label>
+        <p class="fineDepartment">Choose: Sales, IT, HR, Marketing, Finance</p>
         <input type="text"  class="form-control" formControlName="department">
     </div>
     <span *ngIf="department && department.invalid &&department.touched">*Please enter a department</span><br>
 
-    <button  class="btn1" routerLink="/">Cancel</button>
-    <button class="btn2" type="submit"  [disabled]="!empForm.valid" (click)="successNotification()"
+     <!-- form submit button that is disabled unless all entered values are valid and a cancel button that routes back to home -->
+    <button  class="btn1" routerLink="/">Home</button>
+    <button class="btn2" type="submit"  [disabled]="!empForm.valid"
         >Submit</button>
 </form>
 </div>

@@ -21,7 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule,//fo routing
     ReactiveFormsModule //Works with the reactive forms, making them actve 
     , FormsModule
   ],

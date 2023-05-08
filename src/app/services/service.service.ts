@@ -9,28 +9,11 @@ import { Employee } from '../employee';
 export class ServiceService {
   constructor(private http:HttpClient) { }
 
+  // backend url
+
   private url ='http://localhost:8080/employees';
 
-  /* public getData(id:any):Observable< any[]>{
-    return this.http.get<any>("this.url")
-  }
-
-  public getOne(id:any):Observable <any[]>{
-    return this.http.get<any>(`http://localhost:8080/employees${id}`)
-  }
-
-  public addData(val:any):Observable<any>{
-    return this.http.post(this.url, val)
-  }
-
-  public updateData(val:any, id:any){
-    return this.http.put(this.url+id, val)
-  }
-  public deleteData(id:any){
-    return this.http.delete(this.url+id)
-  } */
-
-
+  // GET, ADD, UPDATE and DELETE Http methods that make calls to our restful API (backend)
   getEmployeeAll(){
     return this.http.get(`${this.url}`)
   }
@@ -38,9 +21,6 @@ export class ServiceService {
   getEmployee(empId:any): Observable<any[]>{
     return this.http.get<any>(`${this.url}/${empId}`)
   }
-  /*getEmployee(empId:number){
-    return this.http.get(this.url+empId)
-  }*/
 
   addEmployee(val:any){
     return this.http.post(`${this.url}`,val)

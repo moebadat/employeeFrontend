@@ -2,15 +2,10 @@
 
 <div class="container">
 
-
-  <form (ngSubmit)="update()" > <!-- [formGroup]="updateForm" #formDir="ngForm" -->
-
-          <!-- <div>
-            <label>Employee's ID: </label>
-            <h4 type="text" id="empNo">{{ this.id }}</h4>
-            <br />
-          </div>  -->
-
+ <!-- A form that calls the updat() methos that edits the details of an employee when it is submitted -->
+  <form (ngSubmit)="update()" [formGroup]="updateForm"> 
+<!-- the forms' labels and inputs that are initially populated using values of fields obtained from  the getData method
+ which gets am employee record via id, which is obtained using local storage -->
           <div>
             <label>Name: </label>
             <input
@@ -19,8 +14,9 @@
               type="text"
               id="name"
               [(ngModel)]="this.name"
-              name="Name"
-            />
+              formControlName="Name"
+            required/>
+            <span  *ngIf="Name && Name.invalid &&Name.touched">*The name needs to be included</span>
             
               <br />
             </div>
@@ -32,9 +28,9 @@
                 id="surname"
                 type="text"
                 [(ngModel)]="this.surname"
-                name="Surname"
-            
+                formControlName="Surname"
               />
+              <span  *ngIf="Surname && Surname.invalid &&Surname.touched">*The surname needs to be included</span>
 
             <div>
               <label>Email Address: </label>
@@ -43,9 +39,20 @@
                 id="email"
                 type="text"
                 [(ngModel)]="this.email"
-                name="Email"
+                formControlName="Email"
               />
+              <span  *ngIf="Email && Email.invalid &&Email.touched">*The name needs to be included</span>
               <br />
+
+              <label>Contact Number:</label>
+              <input
+                class="form-control"
+                id="contactNp"
+                type="text"
+                [(ngModel)]="this.contactNo"
+                formControlName="ContactNo"
+              />
+              <span  *ngIf="contactNo && contactNo.invalid &&contactNo.touched">*The name needs to be included</span>
 
              
             <div>
@@ -55,12 +62,13 @@
                 id="department"
                 type="text"
                 [(ngModel)]="this.department"
-                name="department"
+                formControlName="Department"
               />
+              <span  *ngIf="Department && Department.invalid &&Department.touched">*The name needs to be included</span>
               <br />
             </div>
-
-            <button class="btn1" routerLink="/">Cancel</button>
+           <!-- from submit button and a cancel button to navigate back to the homepage -->
+            <button class="btn1" routerLink="/">Home</button>
             <button class="btn2" type="submit">Update</button>
           </div>
         </div>
